@@ -1,11 +1,15 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'pm-root',
-  template: `<div>      
-  <h1>{{pageTitle}}</h1>      
-      <pm-products></pm-products>
-  </div>`
+  template: `
+  <div>
+      <pm-top-menu [pageTitle]="pageTitle"></pm-top-menu>
+      <div class='container'>
+          <router-outlet></router-outlet>
+      </div>
+   </div>
+  `
 })
 
 export class AppComponent {
